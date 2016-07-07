@@ -218,6 +218,7 @@
                             <description>Release ${project.version}</description>
                             <releaseName>${project.name} ${project.version}</releaseName>
                             <tag>v${project.version}</tag>
+                            <artifact>target/${project.artifactId}-${project.version}.jar</artifact>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -243,7 +244,7 @@
                             <oauthConsumerSecret>${consumerSecret}</oauthConsumerSecret>
                             <oauthAccessToken>${accessToken}</oauthAccessToken>
                             <oauthAccessTokenSecret>${accessTokenSecret}</oauthAccessTokenSecret>
-                            <status>Version ${project.version} of ${project.name} has been released! Get it from Maven Central or GitHub! ${project.url}</status>
+                            <status>Version ${project.version} of ${project.name} has been released! Grab it from Maven Central, Bintray or GitHub! ${project.url}</status>
                         </configuration>
                         <executions>
                             <execution>
