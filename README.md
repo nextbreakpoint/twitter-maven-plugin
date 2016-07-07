@@ -28,15 +28,6 @@ Add plugin to your POM:
                         <oauthAccessTokenSecret>${accessTokenSecret}</oauthAccessTokenSecret>
                         <status>Version ${project.version} of ${project.name} has been released! ${project.url}</status>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <id>updateStatus</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>updateStatus</goal>
-                            </goals>
-                        </execution>
-                    </executions>
                 </plugin>
             </plugins>
         </build>
@@ -68,7 +59,7 @@ Define Twitter secrets in settings.xml:
 
 Run the plugin with the comand:
 
-    mvn -Dchannel=github com.nextbreakpoint:twitter-maven-plugin:updateStatus
+    mvn -Dchannel=twitter com.nextbreakpoint:twitter-maven-plugin:updateStatus
 
 
  
