@@ -127,7 +127,7 @@
             <id>ossrh</id>
             <activation>
                 <property>
-                    <name>repo</name>
+                    <name>channel</name>
                     <value>ossrh</value>
                 </property>
             </activation>
@@ -171,7 +171,7 @@
             <id>bintray</id>
             <activation>
                 <property>
-                    <name>repo</name>
+                    <name>channel</name>
                     <value>bintray</value>
                 </property>
             </activation>
@@ -204,7 +204,7 @@
             <id>github</id>
             <activation>
                 <property>
-                    <name>repo</name>
+                    <name>channel</name>
                     <value>github</value>
                 </property>
             </activation>
@@ -227,7 +227,7 @@
             <id>twitter</id>
             <activation>
                 <property>
-                    <name>repo</name>
+                    <name>channel</name>
                     <value>twitter</value>
                 </property>
             </activation>
