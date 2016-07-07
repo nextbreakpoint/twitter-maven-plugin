@@ -8,7 +8,7 @@
     <version>1.0.0</version>
     <packaging>maven-plugin</packaging>
     <name>Twitter Maven Plugin</name>
-    <description>Twitter Maven Plugin to update status of Twitter account</description>
+    <description>Twitter Maven Plugin updates the status of a Twitter account</description>
     <url>https://github.com/nextbreakpoint/twitter-maven-plugin</url>
     <licenses>
         <license>
@@ -243,7 +243,7 @@
                             <oauthConsumerSecret>${consumerSecret}</oauthConsumerSecret>
                             <oauthAccessToken>${accessToken}</oauthAccessToken>
                             <oauthAccessTokenSecret>${accessTokenSecret}</oauthAccessTokenSecret>
-                            <status>Version ${project.version} of ${project.name} has been released! Find it on Maven Central or GitHub ${project.url}</status>
+                            <status>Version ${project.version} of ${project.name} has been released! Get it from Maven Central or GitHub! ${project.url}</status>
                         </configuration>
                         <executions>
                             <execution>
