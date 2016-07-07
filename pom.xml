@@ -245,15 +245,6 @@
                             <oauthAccessTokenSecret>${accessTokenSecret}</oauthAccessTokenSecret>
                             <status>Version ${project.version} of ${project.name} has been released! Grab it from Maven Central, Bintray or GitHub! ${project.url}</status>
                         </configuration>
-                        <executions>
-                            <execution>
-                                <id>updateStatus</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>updateStatus</goal>
-                                </goals>
-                            </execution>
-                        </executions>
                     </plugin>
                 </plugins>
             </build>
