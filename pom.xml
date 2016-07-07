@@ -196,7 +196,7 @@
             <distributionManagement>
                 <repository>
                     <id>bintray</id>
-                    <url>https://api.bintray.com/maven/andrea-medeghini/maven/${project.artifactId}</url>
+                    <url>https://api.bintray.com/maven/${bintrayAccount}/maven/${project.artifactId}</url>
                 </repository>
             </distributionManagement>
         </profile>
@@ -215,7 +215,6 @@
                         <artifactId>github-release-plugin</artifactId>
                         <version>1.1.1</version>
                         <configuration>
-                            <description>Release ${project.version}</description>
                             <releaseName>${project.name} ${project.version}</releaseName>
                             <tag>v${project.version}</tag>
                             <artifact>target/${project.artifactId}-${project.version}.jar</artifact>
