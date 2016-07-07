@@ -78,7 +78,8 @@ public class TwitterMojo extends AbstractMojo {
 
     public void execute() throws MojoExecutionException {
         Try.of(() -> new TwitterFactory(getConfigurationBuilder().build()).getInstance().updateStatus(getStatus()))
-            .onSuccess(status -> getLog().info("Successfully updated the status to [" + status.getText() + "]."));
+            .onSuccess(status -> getLog().info("Successfully updated the status to [" + status.getText() + "]."))
+            .onFailure(error -> getLog().error("Can't update status", error));
     }
 
     private ConfigurationBuilder getConfigurationBuilder() {
