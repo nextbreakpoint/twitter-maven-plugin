@@ -10,7 +10,7 @@ import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
 @Mojo(name = "updateStatus")
-public class TwitterMojo extends AbstractMojo {
+public class UpdateStatusMojo extends AbstractMojo {
     @Parameter(property = "status")
     private String status;
 
