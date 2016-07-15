@@ -3,12 +3,9 @@ package com.nextbreakpoint.twitter;
 import com.nextbreakpoint.Try;
 import org.apache.maven.plugin.MojoExecutionException;
 
-/**
- * Created by andrea on 06/07/2016.
- */
-public class TestWtitterMojo {
+public class TestTwitterMojo {
     public static void main(String[] args) {
-        Try.of(() -> run()).ifFailure(System.out::println);
+        Try.of(TestTwitterMojo::run).ifFailure(System.out::println);
     }
 
     private static Object run() throws MojoExecutionException {

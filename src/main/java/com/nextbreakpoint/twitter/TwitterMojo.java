@@ -5,6 +5,7 @@ import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
+import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -77,9 +78,13 @@ public class TwitterMojo extends AbstractMojo {
     }
 
     public void execute() throws MojoExecutionException {
-        Try.of(() -> new TwitterFactory(getConfigurationBuilder().build()).getInstance().updateStatus(getStatus()))
-            .onSuccess(status -> getLog().info("Successfully updated the status to [" + status.getText() + "]."))
-            .onFailure(error -> getLog().error("Can't update status", error));
+        Try.of(() -> twitterFactory().updateStatus(getStatus()))
+            .onFailure(error -> getLog().error("Can't update the status", error))
+            .ifPresent(status -> getLog().info("Successfully updated the status to [" + status.getText() + "]."));
+    }
+
+    private Twitter twitterFactory() {
+        return new TwitterFactory(getConfigurationBuilder().build()).getInstance();
     }
 
     private ConfigurationBuilder getConfigurationBuilder() {
