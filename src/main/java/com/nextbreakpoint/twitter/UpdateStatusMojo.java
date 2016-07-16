@@ -1,3 +1,9 @@
+/*
+ * This file is part of Twitter Maven Plugin
+ *
+ * Copyright (c) 2016, Andrea Medeghini
+ * All rights reserved.
+ */
 package com.nextbreakpoint.twitter;
  
 import com.nextbreakpoint.Try;
